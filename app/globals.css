@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+/* ─── SixPackBrands Theme — Light (matches glyph.software exactly) ─── */
+:root {
+  /* Background: cream/off-white matching glyph.software */
+  --bg:            #fafaf9;
+  --bg-card:       #ffffff;
+  --bg-card-hover: #f5f5f4;
+
+  /* Foreground */
+  --fg:            #1c1917;
+  --fg-muted:      #78716c;
+  --fg-dim:        #a8a29e;
+
+  /* Orange accent — matches Glyph's orange exactly */
+  --accent:        #f97316;
+  --accent-hover:  #ea6c0a;
+  --accent-light:  #fb923c;
+  --accent-dim:    rgba(249, 115, 22, 0.10);
+  --accent-border: rgba(249, 115, 22, 0.30);
+  --accent-glow:   rgba(249, 115, 22, 0.15);
+
+  /* Borders */
+  --border:        #e7e5e4;
+  --border-subtle: #f5f5f4;
+  --border-strong: #d6d3d1;
+
+  /* Stone scale (Glyph uses warm stone/neutral tones) */
+  --stone-100: #f5f5f4;
+  --stone-200: #e7e5e4;
+  --stone-300: #d6d3d1;
+  --stone-400: #a8a29e;
+  --stone-500: #78716c;
+  --stone-600: #57534e;
+  --stone-700: #44403c;
+  --stone-800: #292524;
+  --stone-900: #1c1917;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ─── Reset ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Animations ─── */
+@keyframes shimmer {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px var(--accent-glow); }
+  50%       { box-shadow: 0 0 40px var(--accent-glow); }
+}
+
+/* ─── Utility classes (Glyph's exact patterns) ─── */
+
+/* Gradient headline — Glyph uses white→violet, we use white→#FF4500 */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Shimmer variant for CTAs */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    var(--fg-muted) 0%,
+    var(--fg) 35%,
+    var(--accent) 55%,
+    var(--fg-muted) 100%
+  );
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Glass card — exact match to Glyph */
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.glass-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-strong);
+}
+
+/* Dot-grid background — light theme, subtle warm tone lines */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  background-position: center center;
+}
+
+/* Accent glow — replaces Glyph's violet glow */
+.glow-accent {
+  box-shadow: 0 0 24px var(--accent-glow);
+}
+
+/* Subtle radial glow overlay for sections */
+.radial-glow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse at center, rgba(255,69,0,0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Pill badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  border: 1px solid var(--border-strong);
+  color: var(--fg-muted);
+  background: var(--bg-card);
+}
+
+/* Pulse dot */
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.pulse-dot-green {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Section fade-up */
+.fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
+
+/* Code block — light themed */
+.code-block {
+  background: #1c1917;
+  border: 1px solid #292524;
+  border-radius: 12px;
+  padding: 16px;
+  font-family: var(--font-geist-mono), 'Fira Code', monospace;
+  font-size: 12px;
+  line-height: 1.7;
+}
