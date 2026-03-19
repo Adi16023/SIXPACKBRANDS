@@ -116,7 +116,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" style={{ position: "relative", padding: "96px 24px", background: "#ffffff" }}>
+    <section id="faq" className="section-pad" style={{ position: "relative", padding: "96px 24px", background: "#ffffff" }}>
       <div style={{ maxWidth: 720, margin: "0 auto" }}>
 
         {/* Header */}
@@ -139,7 +139,7 @@ export default function FAQ() {
           ))}
         </div>
         {/* After FAQ CTA */}
-        <div style={{ marginTop: 56, textAlign: "center", padding: "40px 32px", background: "#fafaf9", borderRadius: 16, border: "1px solid #e7e5e4" }}>
+        <div className="faq-cta-box" style={{ marginTop: 56, textAlign: "center", padding: "40px 32px", background: "#fafaf9", borderRadius: 16, border: "1px solid #e7e5e4" }}>
           <p style={{ fontSize: 13, fontWeight: 600, color: "#a8a29e", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 12 }}>Have more questions?</p>
           <h3 style={{ fontSize: 22, fontWeight: 700, color: "#1c1917", letterSpacing: "-0.03em", margin: "0 0 24px" }}>
             Let&apos;s talk about your situation.

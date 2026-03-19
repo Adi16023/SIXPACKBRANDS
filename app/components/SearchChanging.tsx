@@ -8,7 +8,7 @@ const CARDS = [
 
 export default function SearchChanging() {
   return (
-    <section id="why" style={{ position: "relative", padding: "96px 24px", background: "#fafaf9", overflow: "hidden" }}>
+    <section id="why" className="section-pad" style={{ position: "relative", padding: "96px 24px", background: "#fafaf9", overflow: "hidden" }}>
       <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
 
         {/* Label */}

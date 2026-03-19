@@ -1,4 +1,6 @@
 "use client";
+import { useState, useEffect } from "react";
+
 const PRODUCT_LINKS = [
   { label: "Why sixpackbrands", href: "#why" },
   { label: "How It Works", href: "#system" },
@@ -9,15 +11,24 @@ const PRODUCT_LINKS = [
 const LEGAL_LINKS = ["Privacy Policy", "Terms of Service", "Cookie Policy"];
 
 export default function Footer() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 640);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   return (
     <footer style={{ borderTop: "1px solid #e7e5e4", padding: "56px 24px 40px", background: "#fafaf9" }}>
       <div style={{ maxWidth: 1152, margin: "0 auto" }}>
 
         {/* Main grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: 40, marginBottom: 48 }} className="footer-grid">
+        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "2fr 1fr 1fr", gap: isMobile ? "32px 24px" : 40, marginBottom: 48 }}>
 
           {/* Brand col */}
-          <div style={{ display:"flex", flexDirection:"column", gap:16 }}>
+          <div style={{ display:"flex", flexDirection:"column", gap:16, gridColumn: isMobile ? "1 / -1" : "auto" }}>
             <div style={{ display:"flex", alignItems:"center", gap:8 }}>
               <span style={{ color:"#1c1917", fontWeight:600, fontSize:17, letterSpacing:"-0.02em" }}>sixpackbrands</span>
             </div>
@@ -90,7 +101,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div style={{ borderTop:"1px solid #e7e5e4", paddingTop:20, display:"flex", flexWrap:"wrap", alignItems:"center", justifyContent:"space-between", gap:12 }}>
+        <div style={{ borderTop:"1px solid #e7e5e4", paddingTop:20, display:"flex", flexWrap:"wrap", alignItems:"center", justifyContent: isMobile ? "center" : "space-between", flexDirection: isMobile ? "column" : "row", gap:12, textAlign: isMobile ? "center" : "left" }}>
           <span style={{ fontSize:12, color:"#a8a29e" }}>© 2026 sixpackbrands. All rights reserved.</span>
           <a href="#" target="_blank" rel="noopener noreferrer"
             style={{ fontSize:12, color:"#a8a29e", textDecoration:"none" }}

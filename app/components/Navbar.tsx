@@ -21,6 +21,13 @@ export default function Navbar() {
   ];
 
   return (
+    <>
+    <style>{`
+      @media (max-width: 768px) {
+        .nav-desktop { display: none !important; width: 0 !important; overflow: hidden !important; }
+        .nav-mobile-btn { display: flex !important; }
+      }
+    `}</style>
     <div
       style={{
         position: "fixed",
@@ -65,7 +72,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav links */}
-        <nav style={{ display: "flex", alignItems: "center", gap: 28 }} className="hidden md:flex">
+        <nav className="nav-desktop" style={{ alignItems: "center", gap: 28 }}>
           {navLinks.map((l) => (
             <a
               key={l.href}
@@ -85,7 +92,7 @@ export default function Navbar() {
         </nav>
 
         {/* Desktop CTA */}
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }} className="hidden md:flex">
+        <div className="nav-desktop" style={{ alignItems: "center", gap: 12 }}>
           <a
             href="#"
             style={{
@@ -111,8 +118,8 @@ export default function Navbar() {
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
-          style={{ background: "none", border: "none", cursor: "pointer", color: "#78716c", padding: 4 }}
-          className="md:hidden"
+          style={{ background: "none", border: "none", cursor: "pointer", color: "#1c1917", padding: 4 }}
+          className="nav-mobile-btn"
         >
           <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             {mobileOpen
@@ -122,55 +129,100 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — full overlay */}
       {mobileOpen && (
         <div
           style={{
-            background: "rgba(250,250,249,0.97)",
-            borderTop: "1px solid #e7e5e4",
-            padding: "16px 24px 24px",
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: "#fafaf9",
+            zIndex: 100,
             display: "flex",
             flexDirection: "column",
-            gap: 4,
+            padding: "0 20px 32px",
           }}
         >
-          {navLinks.map((l) => (
+          {/* Top bar with logo + close */}
+          <div style={{ height: 64, display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: "1px solid #e7e5e4" }}>
+            <span style={{ color: "#1c1917", fontWeight: 600, fontSize: 17, letterSpacing: "-0.02em" }}>sixpackbrands</span>
+            <button
+              onClick={() => setMobileOpen(false)}
+              style={{ background: "none", border: "none", cursor: "pointer", color: "#1c1917", padding: 4 }}
+            >
+              <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M6 18L18 6M6 6l12 12" strokeLinecap="round" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Nav links */}
+          <div style={{ background: "#ffffff", borderRadius: 16, border: "1px solid #e7e5e4", marginTop: 20, overflow: "hidden" }}>
+            {navLinks.map((l, i) => (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => setMobileOpen(false)}
+                style={{
+                  display: "block",
+                  fontSize: 16,
+                  fontWeight: 500,
+                  color: "#1c1917",
+                  textDecoration: "none",
+                  padding: "16px 20px",
+                  borderBottom: i < navLinks.length - 1 ? "1px solid #f5f5f4" : "none",
+                }}
+              >
+                {l.label}
+              </a>
+            ))}
+          </div>
+
+          {/* CTAs */}
+          <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: 12 }}>
             <a
-              key={l.href}
-              href={l.href}
+              href="#"
               onClick={() => setMobileOpen(false)}
               style={{
-                fontSize: 14,
-                color: "#78716c",
+                display: "block",
+                textAlign: "center",
+                fontSize: 15,
+                fontWeight: 700,
+                color: "#1c1917",
+                background: "#ffffff",
+                border: "1px solid #e7e5e4",
+                padding: "14px",
+                borderRadius: 14,
                 textDecoration: "none",
-                padding: "10px 0",
-                borderBottom: "1px solid #f5f5f4",
               }}
             >
-              {l.label}
+              Learn More
             </a>
-          ))}
-          <a
-            href="#"
-            onClick={() => setMobileOpen(false)}
-            style={{
-              marginTop: 12,
-              display: "block",
-              textAlign: "center",
-              fontSize: 13,
-              fontWeight: 600,
-              color: "#fff",
-              background: "#0460f9",
-              padding: "12px",
-              borderRadius: 10,
-              textDecoration: "none",
-            }}
-          >
-            Book a Free Audit
-          </a>
+            <a
+              href="#"
+              onClick={() => setMobileOpen(false)}
+              style={{
+                display: "block",
+                textAlign: "center",
+                fontSize: 15,
+                fontWeight: 700,
+                color: "#fff",
+                background: "#1c1917",
+                padding: "14px",
+                borderRadius: 14,
+                textDecoration: "none",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.15)",
+              }}
+            >
+              Book a Free Audit
+            </a>
+          </div>
         </div>
       )}
       </header>
     </div>
+    </>
   );
 }

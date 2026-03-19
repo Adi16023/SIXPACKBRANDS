@@ -57,7 +57,7 @@ const CARDS = [
 
 export default function AISystem() {
   return (
-    <section id="system" style={{ padding: "96px 24px", background: "#ffffff" }}>
+    <section id="system" className="section-pad" style={{ padding: "96px 24px", background: "#ffffff" }}>
       <div style={{ maxWidth: 1152, margin: "0 auto" }}>
 
         {/* Header */}
@@ -71,7 +71,7 @@ export default function AISystem() {
         </div>
 
         {/* 3 Cards */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginBottom: 56 }}>
+        <div className="ai-cards-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginBottom: 56 }}>
           {CARDS.map((card, i) => (
             <div
               key={i}

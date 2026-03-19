@@ -30,7 +30,7 @@ const Cross = () => (
 
 export default function ComparisonTable() {
   return (
-    <section style={{ padding: "96px 24px", background: "#fafaf9" }}>
+    <section className="section-pad" style={{ padding: "96px 24px", background: "#fafaf9" }}>
       <div style={{ maxWidth: 900, margin: "0 auto" }}>
 
         {/* Header */}
@@ -81,7 +81,7 @@ export default function ComparisonTable() {
         </div>
 
         {/* Caption */}
-        <div style={{ marginTop: 32, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 8 }}>
+        <div className="comparison-caption" style={{ marginTop: 32, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 8 }}>
           {[
             "SEO builds website authority.",
             "Personal branding builds social authority.",

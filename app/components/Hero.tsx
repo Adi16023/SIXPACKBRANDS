@@ -3,6 +3,7 @@
 export default function Hero() {
   return (
     <section
+      className="hero-section"
       style={{
         position: "relative",
         minHeight: "100vh",
@@ -17,7 +18,7 @@ export default function Hero() {
       <div style={{ position: "absolute", top: "20%", right: "10%", width: 600, height: 600, borderRadius: "50%", background: "rgba(4,96,249,0.05)", filter: "blur(120px)", pointerEvents: "none" }} />
       <div style={{ position: "absolute", bottom: "10%", left: "5%", width: 400, height: 400, borderRadius: "50%", background: "rgba(4,96,249,0.04)", filter: "blur(100px)", pointerEvents: "none" }} />
 
-      <div style={{ maxWidth: 1152, margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
+      <div className="hero-grid" style={{ maxWidth: 1152, margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
 
         {/* LEFT — Copy */}
         <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
@@ -35,7 +36,7 @@ export default function Hero() {
           </h1>
 
           {/* Subheadline */}
-          <p style={{ fontSize: 18, color: "#57534e", lineHeight: 1.7, margin: 0, maxWidth: 460 }}>
+          <p className="hero-subtext" style={{ fontSize: 18, color: "#57534e", lineHeight: 1.7, margin: 0, maxWidth: 460 }}>
             We help founders get recommended in AI answers by building founder authority online.
           </p>
 
@@ -56,7 +57,7 @@ export default function Hero() {
         </div>
 
         {/* RIGHT — AI Chat Mock */}
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div className="hero-chat-mock" style={{ display: "flex", justifyContent: "center" }}>
           <div style={{ width: "100%", maxWidth: 420, background: "#ffffff", border: "1px solid #e7e5e4", borderRadius: 20, overflow: "hidden", boxShadow: "0 8px 40px rgba(0,0,0,0.08)" }}>
             {/* Chat header */}
             <div style={{ padding: "14px 18px", borderBottom: "1px solid #f5f5f4", background: "#fafaf9", display: "flex", alignItems: "center", gap: 10 }}>
@@ -110,12 +111,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Mobile: stack columns via media override handled by CSS */}
-      <style>{`
-        @media (max-width: 768px) {
-          .hero-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   );
 }
