@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SixPackBrands — AI Brand Identity Generator",
+  title: "sixpackbrands — AI Brand Identity Generator",
   description:
     "Logo, colors, typography, and dev-ready assets generated instantly so founders can launch a brand without hiring an agency.",
 };

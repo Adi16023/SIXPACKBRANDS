@@ -14,7 +14,7 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "Why SixPackBrands", href: "#why" },
+    { label: "Why sixpackbrands", href: "#why" },
     { label: "How It Works", href: "#system" },
     { label: "Blog", href: "#blog" },
     { label: "FAQ", href: "#faq" },
@@ -58,28 +58,9 @@ export default function Navbar() {
         }}
       >
         {/* Logo */}
-        <Link href="/" style={{ display: "flex", alignItems: "center", gap: 8, textDecoration: "none" }}>
-          <div
-            style={{
-              width: 28,
-              height: 28,
-              borderRadius: 7,
-              background: "#f97316",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexShrink: 0,
-            }}
-          >
-            <svg width="13" height="13" viewBox="0 0 12 12" fill="none">
-              <rect x="1" y="1" width="4" height="4" rx="0.8" fill="white" fillOpacity="0.95" />
-              <rect x="7" y="1" width="4" height="4" rx="0.8" fill="white" fillOpacity="0.6" />
-              <rect x="1" y="7" width="4" height="4" rx="0.8" fill="white" fillOpacity="0.6" />
-              <rect x="7" y="7" width="4" height="4" rx="0.8" fill="white" fillOpacity="0.3" />
-            </svg>
-          </div>
+        <Link href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
           <span style={{ color: "#1c1917", fontWeight: 600, fontSize: 17, letterSpacing: "-0.02em" }}>
-            SixPackBrands.
+            sixpackbrands
           </span>
         </Link>
 
@@ -105,36 +86,19 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div style={{ display: "flex", alignItems: "center", gap: 12 }} className="hidden md:flex">
-          {/* NEW badge */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 6,
-              fontSize: 12,
-              padding: "5px 12px",
-              borderRadius: 9999,
-              background: "rgba(249,115,22,0.08)",
-              border: "1px solid rgba(249,115,22,0.20)",
-              color: "#fb923c",
-            }}
-          >
-            <span className="pulse-dot" />
-            <span style={{ fontWeight: 600, color: "#f97316" }}>NEW</span>
-            <span style={{ color: "#a8a29e" }}>Free Brand Audit Tool</span>
-          </div>
           <a
             href="#"
             style={{
-              fontSize: 13,
-              fontWeight: 600,
+              fontSize: 14,
+              fontWeight: 700,
               color: "#fff",
               background: "#1c1917",
-              padding: "8px 18px",
-              borderRadius: 9999,
+              padding: "10px 22px",
+              borderRadius: 12,
               textDecoration: "none",
               transition: "background 0.15s",
               letterSpacing: "-0.01em",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.background = "#44403c")}
             onMouseLeave={(e) => (e.currentTarget.style.background = "#1c1917")}
@@ -196,7 +160,7 @@ export default function Navbar() {
               fontSize: 13,
               fontWeight: 600,
               color: "#fff",
-              background: "#f97316",
+              background: "#0460f9",
               padding: "12px",
               borderRadius: 10,
               textDecoration: "none",

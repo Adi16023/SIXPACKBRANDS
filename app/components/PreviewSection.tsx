@@ -29,8 +29,8 @@ export default function PreviewSection() {
             <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 12 }}>
               {FEATURES.map((f) => (
                 <li key={f} style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "#44403c" }}>
-                  <span style={{ width: 20, height: 20, borderRadius: "50%", background: "rgba(249,115,22,0.10)", border: "1px solid rgba(249,115,22,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#f97316" strokeWidth="2">
+                  <span style={{ width: 20, height: 20, borderRadius: "50%", background: "rgba(4,96,249,0.10)", border: "1px solid rgba(4,96,249,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#0460f9" strokeWidth="2">
                       <path d="M2 6l3 3 5-5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </span>
@@ -38,7 +38,7 @@ export default function PreviewSection() {
                 </li>
               ))}
             </ul>
-            <a href="#" style={{ display: "inline-flex", alignSelf: "flex-start", alignItems: "center", gap: 8, fontSize: 13, fontWeight: 600, color: "#fff", background: "#f97316", padding: "10px 20px", borderRadius: 10, textDecoration: "none", boxShadow: "0 4px 12px rgba(249,115,22,0.25)" }}>
+            <a href="#" style={{ display: "inline-flex", alignSelf: "flex-start", alignItems: "center", gap: 8, fontSize: 13, fontWeight: 600, color: "#fff", background: "#0460f9", padding: "10px 20px", borderRadius: 10, textDecoration: "none", boxShadow: "0 4px 12px rgba(4,96,249,0.25)" }}>
               Visualize My Brand
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
@@ -52,9 +52,9 @@ export default function PreviewSection() {
             {/* Social preview card */}
             <div className="glass-card" style={{ padding: 20, display: "flex", flexDirection: "column", gap: 16 }}>
               <p style={{ fontSize: 11, fontWeight: 600, color: "#a8a29e", letterSpacing: "0.08em", textTransform: "uppercase", margin: 0 }}>Social Preview</p>
-              <div style={{ background: "rgba(249,115,22,0.06)", border: "1px solid rgba(249,115,22,0.15)", borderRadius: 12, padding: 24, display: "flex", alignItems: "center", justifyContent: "center", minHeight: 120 }}>
+              <div style={{ background: "rgba(4,96,249,0.06)", border: "1px solid rgba(4,96,249,0.15)", borderRadius: 12, padding: 24, display: "flex", alignItems: "center", justifyContent: "center", minHeight: 120 }}>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
-                  <div style={{ width: 56, height: 56, borderRadius: 14, background: "#f97316", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <div style={{ width: 56, height: 56, borderRadius: 14, background: "#0460f9", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
                       <rect x="3" y="3" width="9" height="9" rx="1.5" fill="white" fillOpacity="0.9" />
                       <rect x="14" y="3" width="9" height="9" rx="1.5" fill="white" fillOpacity="0.55" />
@@ -62,7 +62,7 @@ export default function PreviewSection() {
                       <rect x="14" y="14" width="9" height="9" rx="1.5" fill="white" fillOpacity="0.25" />
                     </svg>
                   </div>
-                  <span style={{ color: "#1c1917", fontWeight: 700, fontSize: 16, letterSpacing: "-0.02em" }}>SixPackBrands</span>
+                  <span style={{ color: "#1c1917", fontWeight: 700, fontSize: 16, letterSpacing: "-0.02em" }}>sixpackbrands</span>
                 </div>
               </div>
               <div style={{ display: "flex", gap: 8 }}>
@@ -78,12 +78,12 @@ export default function PreviewSection() {
               <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 10 }}>
                 {MERCH.map((item) => (
                   <div key={item} style={{ background: "#f5f5f4", border: "1px solid #e7e5e4", borderRadius: 10, padding: 16, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, minHeight: 80 }}>
-                    <div style={{ width: 24, height: 24, borderRadius: 6, background: "rgba(249,115,22,0.12)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <div style={{ width: 24, height: 24, borderRadius: 6, background: "rgba(4,96,249,0.12)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                       <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
-                        <rect x="1" y="1" width="4" height="4" rx="0.5" fill="#f97316" />
-                        <rect x="7" y="1" width="4" height="4" rx="0.5" fill="#f97316" fillOpacity="0.55" />
-                        <rect x="1" y="7" width="4" height="4" rx="0.5" fill="#f97316" fillOpacity="0.55" />
-                        <rect x="7" y="7" width="4" height="4" rx="0.5" fill="#f97316" fillOpacity="0.25" />
+                        <rect x="1" y="1" width="4" height="4" rx="0.5" fill="#0460f9" />
+                        <rect x="7" y="1" width="4" height="4" rx="0.5" fill="#0460f9" fillOpacity="0.55" />
+                        <rect x="1" y="7" width="4" height="4" rx="0.5" fill="#0460f9" fillOpacity="0.55" />
+                        <rect x="7" y="7" width="4" height="4" rx="0.5" fill="#0460f9" fillOpacity="0.25" />
                       </svg>
                     </div>
                     <span style={{ fontSize: 11, color: "#a8a29e" }}>{item}</span>

@@ -12,7 +12,7 @@ const GRID_ACTIVE = new Set([0,1,2,3,4,7,8,11,12,13,14,15]);
 export default function BrandSystem() {
   return (
     <section className="grid-bg" style={{ position: "relative", padding: "96px 24px", overflow: "hidden" }}>
-      <div style={{ position:"absolute", top:"50%", left:"50%", transform:"translate(-50%,-50%)", width:700, height:450, borderRadius:"50%", background:"rgba(249,115,22,0.05)", filter:"blur(120px)", pointerEvents:"none" }} />
+      <div style={{ position:"absolute", top:"50%", left:"50%", transform:"translate(-50%,-50%)", width:700, height:450, borderRadius:"50%", background:"rgba(4, 96, 249,0.05)", filter:"blur(120px)", pointerEvents:"none" }} />
 
       <div style={{ position: "relative", zIndex: 1, maxWidth: 1152, margin: "0 auto" }}>
         {/* Section header */}
@@ -31,7 +31,7 @@ export default function BrandSystem() {
           {/* Top bar */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "14px 24px", borderBottom: "1px solid #e7e5e4", background: "#fafaf9" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <div style={{ width: 28, height: 28, borderRadius: 8, background: "#f97316", display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <div style={{ width: 28, height: 28, borderRadius: 8, background: "#0460f9", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                   <rect x="1" y="1" width="4" height="4" rx="0.6" fill="white" fillOpacity="0.95" />
                   <rect x="7" y="1" width="4" height="4" rx="0.6" fill="white" fillOpacity="0.55" />
@@ -43,7 +43,7 @@ export default function BrandSystem() {
             </div>
             <div style={{ display: "flex", gap: 8 }}>
               <button style={{ fontSize: 12, color: "#78716c", background: "transparent", border: "1px solid #d6d3d1", padding: "5px 12px", borderRadius: 8, cursor: "pointer" }}>Export PDF</button>
-              <button style={{ fontSize: 12, color: "#fff", background: "#f97316", border: "none", padding: "5px 12px", borderRadius: 8, cursor: "pointer" }}>Download All</button>
+              <button style={{ fontSize: 12, color: "#fff", background: "#0460f9", border: "none", padding: "5px 12px", borderRadius: 8, cursor: "pointer" }}>Download All</button>
             </div>
           </div>
 
@@ -54,9 +54,9 @@ export default function BrandSystem() {
               {TOC.map((item, i) => (
                 <button key={item} style={{
                   display: "block", width: "100%", textAlign: "left", fontSize: 12, padding: "7px 10px",
-                  borderRadius: 8, border: i === 1 ? "1px solid rgba(249,115,22,0.30)" : "1px solid transparent",
-                  background: i === 1 ? "rgba(249,115,22,0.08)" : "transparent",
-                  color: i === 1 ? "#f97316" : "#78716c", cursor: "pointer", marginBottom: 2,
+                  borderRadius: 8, border: i === 1 ? "1px solid rgba(4, 96, 249,0.30)" : "1px solid transparent",
+                  background: i === 1 ? "rgba(4, 96, 249,0.08)" : "transparent",
+                  color: i === 1 ? "#0460f9" : "#78716c", cursor: "pointer", marginBottom: 2,
                 }}>{item}</button>
               ))}
             </div>
@@ -68,7 +68,7 @@ export default function BrandSystem() {
               <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                 <p style={{ fontSize: 10, fontWeight: 600, color: "#a8a29e", letterSpacing: "0.08em", textTransform: "uppercase", margin: 0 }}>Logo</p>
                 <div style={{ background: "#f5f5f4", border: "1px solid #e7e5e4", borderRadius: 12, padding: 24, display: "flex", flexDirection: "column", alignItems: "center", gap: 12, minHeight: 160 }}>
-                  <div style={{ width: 64, height: 64, borderRadius: 16, background: "#f97316", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <div style={{ width: 64, height: 64, borderRadius: 16, background: "#0460f9", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <svg width="32" height="32" viewBox="0 0 30 30" fill="none">
                       <rect x="3" y="3" width="10" height="10" rx="1.8" fill="white" fillOpacity="0.95" />
                       <rect x="17" y="3" width="10" height="10" rx="1.8" fill="white" fillOpacity="0.55" />
@@ -76,7 +76,7 @@ export default function BrandSystem() {
                       <rect x="17" y="17" width="10" height="10" rx="1.8" fill="white" fillOpacity="0.25" />
                     </svg>
                   </div>
-                  <span style={{ color: "#1c1917", fontWeight: 700, fontSize: 18, letterSpacing: "-0.03em" }}>SixPackBrands</span>
+                  <span style={{ color: "#1c1917", fontWeight: 700, fontSize: 18, letterSpacing: "-0.03em" }}>sixpackbrands</span>
                   <span style={{ fontSize: 11, color: "#a8a29e" }}>Geometric construction on 4×4 grid.</span>
                 </div>
                 {/* Construction grid */}
@@ -86,8 +86,8 @@ export default function BrandSystem() {
                     {Array.from({ length: 16 }).map((_, i) => (
                       <div key={i} style={{
                         aspectRatio: "1", borderRadius: 3,
-                        background: GRID_ACTIVE.has(i) ? "rgba(249,115,22,0.25)" : "#e7e5e4",
-                        border: `1px solid ${GRID_ACTIVE.has(i) ? "rgba(249,115,22,0.40)" : "#d6d3d1"}`,
+                        background: GRID_ACTIVE.has(i) ? "rgba(4,96,249,0.25)" : "#e7e5e4",
+                        border: `1px solid ${GRID_ACTIVE.has(i) ? "rgba(4, 96, 249,0.40)" : "#d6d3d1"}`,
                       }} />
                     ))}
                   </div>

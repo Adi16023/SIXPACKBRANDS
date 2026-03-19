@@ -14,8 +14,8 @@ export default function Hero() {
       }}
     >
       {/* Background glow */}
-      <div style={{ position: "absolute", top: "20%", right: "10%", width: 600, height: 600, borderRadius: "50%", background: "rgba(249,115,22,0.05)", filter: "blur(120px)", pointerEvents: "none" }} />
-      <div style={{ position: "absolute", bottom: "10%", left: "5%", width: 400, height: 400, borderRadius: "50%", background: "rgba(99,102,241,0.04)", filter: "blur(100px)", pointerEvents: "none" }} />
+      <div style={{ position: "absolute", top: "20%", right: "10%", width: 600, height: 600, borderRadius: "50%", background: "rgba(4,96,249,0.05)", filter: "blur(120px)", pointerEvents: "none" }} />
+      <div style={{ position: "absolute", bottom: "10%", left: "5%", width: 400, height: 400, borderRadius: "50%", background: "rgba(4,96,249,0.04)", filter: "blur(100px)", pointerEvents: "none" }} />
 
       <div style={{ maxWidth: 1152, margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
 
@@ -31,7 +31,7 @@ export default function Hero() {
           <h1 style={{ fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 800, lineHeight: 1.08, letterSpacing: "-0.04em", color: "#1c1917", margin: 0 }}>
             If AI doesn&apos;t<br />
             recommend you,<br />
-            <span style={{ color: "#f97316", fontStyle: "italic" }}>you don&apos;t exist.</span>
+            <span style={{ color: "#0460f9", fontStyle: "italic" }}>you don&apos;t exist.</span>
           </h1>
 
           {/* Subheadline */}
@@ -48,7 +48,6 @@ export default function Hero() {
               onMouseLeave={(e) => (e.currentTarget.style.background = "#1c1917")}
             >
               Book a Free Audit
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </a>
             <p style={{ fontSize: 13, color: "#a8a29e", margin: 0 }}>
               Best for founders who want to become the recommended expert in their industry.
@@ -65,14 +64,14 @@ export default function Hero() {
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
               </div>
               <span style={{ fontSize: 13, fontWeight: 600, color: "#1c1917" }}>Ask AI</span>
-              <span style={{ marginLeft: "auto", fontSize: 11, color: "#a8a29e", background: "#f5f5f4", padding: "2px 8px", borderRadius: 9999 }}>GPT-4o</span>
+              <span style={{ marginLeft: "auto", fontSize: 11, color: "#a8a29e", background: "#f5f5f4", padding: "2px 8px", borderRadius: 9999 }}>GPT-5.4</span>
             </div>
 
             {/* User message */}
             <div style={{ padding: "16px 18px 8px" }}>
               <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 16 }}>
                 <div style={{ background: "#1c1917", color: "#fff", fontSize: 13, padding: "10px 14px", borderRadius: "14px 14px 4px 14px", maxWidth: "80%" }}>
-                  Best marketing experts for SaaS founders
+                  Best AI SEO experts for businesses
                 </div>
               </div>
 
@@ -80,18 +79,18 @@ export default function Hero() {
               <div style={{ background: "#f8f8f7", border: "1px solid #eeece9", borderRadius: "4px 14px 14px 14px", padding: "14px 16px" }}>
                 <div style={{ fontSize: 11, fontWeight: 600, color: "#a8a29e", marginBottom: 10, textTransform: "uppercase", letterSpacing: "0.06em" }}>AI Response</div>
                 {[
-                  { rank: "1", name: "Ajinkya", brand: "SixPackBrands", highlight: true },
+                  { rank: "1", name: "Ajinkya", brand: "sixpackbrands", highlight: true },
                   { rank: "2", name: "Expert A", brand: "Marketing Agency" , highlight: false },
                   { rank: "3", name: "Expert B", brand: "Growth Studio", highlight: false },
                 ].map((item) => (
                   <div
                     key={item.rank}
-                    style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 10px", borderRadius: 8, marginBottom: 4, background: item.highlight ? "rgba(249,115,22,0.06)" : "transparent", border: item.highlight ? "1px solid rgba(249,115,22,0.15)" : "1px solid transparent" }}
+                    style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 10px", borderRadius: 8, marginBottom: 4, background: item.highlight ? "rgba(4,96,249,0.06)" : "transparent", border: item.highlight ? "1px solid rgba(4,96,249,0.15)" : "1px solid transparent" }}
                   >
-                    <span style={{ width: 22, height: 22, borderRadius: "50%", background: item.highlight ? "#f97316" : "#e7e5e4", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 11, fontWeight: 700, color: item.highlight ? "#fff" : "#78716c", flexShrink: 0 }}>{item.rank}</span>
+                    <span style={{ width: 22, height: 22, borderRadius: "50%", background: item.highlight ? "#0460f9" : "#e7e5e4", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 11, fontWeight: 700, color: item.highlight ? "#fff" : "#78716c", flexShrink: 0 }}>{item.rank}</span>
                     <div>
                       <div style={{ fontSize: 13, fontWeight: item.highlight ? 700 : 500, color: "#1c1917" }}>{item.name}</div>
-                      <div style={{ fontSize: 11, color: item.highlight ? "#f97316" : "#a8a29e" }}>{item.brand}</div>
+                      <div style={{ fontSize: 11, color: item.highlight ? "#0460f9" : "#a8a29e" }}>{item.brand}</div>
                     </div>
                   </div>
                 ))}

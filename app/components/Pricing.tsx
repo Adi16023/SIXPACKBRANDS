@@ -110,17 +110,17 @@ export default function Pricing() {
                 transition: "border-color 0.2s, box-shadow 0.2s",
                 background: plan.highlight ? "#ffffff" : "#ffffff",
                 border: plan.highlight
-                  ? "2px solid #f97316"
+                  ? "2px solid #0460f9"
                   : hovered === i
                   ? "1px solid #d6d3d1"
                   : "1px solid #e7e5e4",
-                boxShadow: plan.highlight ? "0 8px 40px rgba(249,115,22,0.15)" : "0 1px 4px rgba(0,0,0,0.04)",
+                boxShadow: plan.highlight ? "0 8px 40px rgba(4,96,249,0.15)" : "0 1px 4px rgba(0,0,0,0.04)",
               }}
             >
               {/* Popular badge */}
               {plan.highlight && (
                 <div style={{ position: "absolute", top: -14, left: "50%", transform: "translateX(-50%)" }}>
-                  <span style={{ fontSize: 11, fontWeight: 700, color: "#fff", background: "#f97316", padding: "5px 14px", borderRadius: 9999, whiteSpace: "nowrap", letterSpacing: "0.02em" }}>
+                  <span style={{ fontSize: 11, fontWeight: 700, color: "#fff", background: "#0460f9", padding: "5px 14px", borderRadius: 9999, whiteSpace: "nowrap", letterSpacing: "0.02em" }}>
                     Most Popular
                   </span>
                 </div>
@@ -153,7 +153,7 @@ export default function Pricing() {
                   textDecoration: "none",
                   transition: "background 0.15s",
                   ...(plan.highlight
-                    ? { background: "#f97316", color: "#fff", border: "none" }
+                    ? { background: "#0460f9", color: "#fff", border: "none" }
                     : { background: "#f5f5f4", color: "#44403c", border: "1px solid #e7e5e4" }),
                 }}
               >
@@ -168,8 +168,8 @@ export default function Pricing() {
                 {plan.features.map((f) => (
                   <li key={f.text} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 13 }}>
                     {f.included ? (
-                      <span style={{ width: 16, height: 16, borderRadius: "50%", background: "rgba(249,115,22,0.10)", border: "1px solid rgba(249,115,22,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                        <svg width="8" height="8" viewBox="0 0 12 12" fill="none" stroke="#f97316" strokeWidth="2.5">
+                      <span style={{ width: 16, height: 16, borderRadius: "50%", background: "rgba(4,96,249,0.10)", border: "1px solid rgba(4,96,249,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                        <svg width="8" height="8" viewBox="0 0 12 12" fill="none" stroke="#0460f9" strokeWidth="2.5">
                           <path d="M2 6l3 3 5-5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </span>

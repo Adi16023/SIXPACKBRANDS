@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* ─── SixPackBrands Theme — Light (matches glyph.software exactly) ─── */
+/* ─── sixpackbrands Theme — Light (matches glyph.software exactly) ─── */
 :root {
   /* Background: cream/off-white matching glyph.software */
   --bg:            #fafaf9;
@@ -12,13 +12,13 @@
   --fg-muted:      #78716c;
   --fg-dim:        #a8a29e;
 
-  /* Orange accent — matches Glyph's orange exactly */
-  --accent:        #f97316;
-  --accent-hover:  #ea6c0a;
-  --accent-light:  #fb923c;
-  --accent-dim:    rgba(249, 115, 22, 0.10);
-  --accent-border: rgba(249, 115, 22, 0.30);
-  --accent-glow:   rgba(249, 115, 22, 0.15);
+  /* Blue accent */
+  --accent:        #0460f9;
+  --accent-hover:  #0350d4;
+  --accent-light:  #3b82f6;
+  --accent-dim:    rgba(4, 96, 249, 0.10);
+  --accent-border: rgba(4, 96, 249, 0.30);
+  --accent-glow:   rgba(4, 96, 249, 0.15);
 
   /* Borders */
   --border:        #e7e5e4;

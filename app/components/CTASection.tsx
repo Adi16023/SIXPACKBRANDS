@@ -8,15 +8,15 @@ export default function CTASection() {
       style={{ position: "relative", padding: "96px 24px", overflow: "hidden" }}
     >
       {/* Glow */}
-      <div style={{ position:"absolute", top:"50%", left:"50%", transform:"translate(-50%,-50%)", width:800, height:500, borderRadius:"50%", background:"rgba(249,115,22,0.06)", filter:"blur(120px)", pointerEvents:"none" }} />
+      <div style={{ position:"absolute", top:"50%", left:"50%", transform:"translate(-50%,-50%)", width:800, height:500, borderRadius:"50%", background:"rgba(4,96,249,0.06)", filter:"blur(120px)", pointerEvents:"none" }} />
 
       <div style={{ position:"relative", zIndex:1, maxWidth:720, margin:"0 auto", textAlign:"center", display:"flex", flexDirection:"column", alignItems:"center", gap:32 }}>
 
         {/* Icon */}
         <div style={{
-          width: 64, height: 64, borderRadius: 18, background: "#f97316",
+          width: 64, height: 64, borderRadius: 18, background: "#0460f9",
           display: "flex", alignItems: "center", justifyContent: "center",
-          boxShadow: "0 8px 32px rgba(249,115,22,0.30)",
+          boxShadow: "0 8px 32px rgba(4,96,249,0.30)",
         }}>
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
             <rect x="4" y="4" width="9" height="9" rx="1.5" fill="white" fillOpacity="0.95" />
@@ -45,13 +45,13 @@ export default function CTASection() {
             style={{
               display:"inline-flex", alignItems:"center", gap:8,
               fontSize:14, fontWeight:600, color:"#fff",
-              background:"#f97316", padding:"12px 28px",
+              background:"#0460f9", padding:"12px 28px",
               borderRadius:14, textDecoration:"none",
-              boxShadow:"0 4px 20px rgba(249,115,22,0.30)",
+              boxShadow:"0 4px 20px rgba(4,96,249,0.30)",
               transition:"background 0.15s",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = "#ea6c0a")}
-            onMouseLeave={(e) => (e.currentTarget.style.background = "#f97316")}
+            onMouseEnter={(e) => (e.currentTarget.style.background = "#0350d4")}
+            onMouseLeave={(e) => (e.currentTarget.style.background = "#0460f9")}
           >
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M13 10V3L4 14h7v7l9-11h-7z" strokeLinecap="round" strokeLinejoin="round" />
@@ -63,7 +63,7 @@ export default function CTASection() {
             onMouseLeave={(e) => (e.currentTarget.style.color = "#78716c")}
           >
             Already have an account?{" "}
-            <span style={{ color:"#f97316", textDecoration:"underline", textUnderlineOffset:3 }}>Log in</span>
+            <span style={{ color:"#0460f9", textDecoration:"underline", textUnderlineOffset:3 }}>Log in</span>
           </a>
         </div>
 

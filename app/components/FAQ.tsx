@@ -16,7 +16,7 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: { q: string; a: string }; isO
     <div
       style={{
         background: "#ffffff",
-        border: `1px solid ${isOpen ? "rgba(249,115,22,0.30)" : "#e7e5e4"}`,
+        border: `1px solid ${isOpen ? "rgba(4,96,249,0.30)" : "#e7e5e4"}`,
         borderRadius: 16,
         overflow: "hidden",
         transition: "border-color 0.25s",
@@ -50,10 +50,10 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: { q: string; a: string }; isO
           justifyContent: "center",
           transition: "transform 0.3s cubic-bezier(0.4,0,0.2,1), background 0.2s, border-color 0.2s",
           transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
-          background: isOpen ? "rgba(249,115,22,0.08)" : "#f5f5f4",
-          border: isOpen ? "1px solid rgba(249,115,22,0.30)" : "1px solid #e7e5e4",
+          background: isOpen ? "rgba(4,96,249,0.08)" : "#f5f5f4",
+          border: isOpen ? "1px solid rgba(4,96,249,0.30)" : "1px solid #e7e5e4",
         }}>
-          <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke={isOpen ? "#f97316" : "#a8a29e"} strokeWidth="2">
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke={isOpen ? "#0460f9" : "#a8a29e"} strokeWidth="2">
             <path d="M2 4l4 4 4-4" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </span>
@@ -146,12 +146,11 @@ export default function FAQ() {
           </h3>
           <a
             href="#"
-            style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 14, fontWeight: 700, color: "#fff", background: "#1c1917", padding: "12px 28px", borderRadius: 10, textDecoration: "none", letterSpacing: "-0.01em", transition: "background 0.15s" }}
+            style={{ display: "inline-flex", alignItems: "center", fontSize: 15, fontWeight: 700, color: "#fff", background: "#1c1917", padding: "14px 32px", borderRadius: 12, textDecoration: "none", letterSpacing: "-0.01em", boxShadow: "0 4px 16px rgba(0,0,0,0.15)", transition: "background 0.15s" }}
             onMouseEnter={(e) => (e.currentTarget.style.background = "#44403c")}
             onMouseLeave={(e) => (e.currentTarget.style.background = "#1c1917")}
           >
-            Book a Free Discovery Call
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            Book a Free Audit
           </a>
         </div>
       </div>

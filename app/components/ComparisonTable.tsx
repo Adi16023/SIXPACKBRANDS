@@ -54,8 +54,8 @@ export default function ComparisonTable() {
                 <th style={{ padding: "16px 20px", textAlign: "center", fontSize: 13, fontWeight: 600, color: "#a8a29e", borderBottom: "1px solid #f0efee", background: "#fafaf9" }}>
                   Personal Branding
                 </th>
-                <th style={{ padding: "16px 20px", textAlign: "center", fontSize: 13, fontWeight: 700, color: "#f97316", borderBottom: "1px solid #f0efee", background: "rgba(249,115,22,0.04)" }}>
-                  SixPackBrands ✦
+                <th style={{ padding: "16px 20px", textAlign: "center", fontSize: 13, fontWeight: 700, color: "#0460f9", borderBottom: "1px solid #f0efee", background: "rgba(4,96,249,0.04)" }}>
+                  sixpackbrands ✦
                 </th>
               </tr>
             </thead>
@@ -71,7 +71,7 @@ export default function ComparisonTable() {
                   <td style={{ padding: "14px 20px", textAlign: "center" }}>
                     {row.pb ? <Check /> : <Cross />}
                   </td>
-                  <td style={{ padding: "14px 20px", textAlign: "center", background: "rgba(249,115,22,0.03)" }}>
+                  <td style={{ padding: "14px 20px", textAlign: "center", background: "rgba(4,96,249,0.03)" }}>
                     {row.spb ? <Check /> : <Cross />}
                   </td>
                 </tr>

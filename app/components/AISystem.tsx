@@ -62,7 +62,7 @@ export default function AISystem() {
 
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: 56 }}>
-          <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 600, color: "#f97316", background: "rgba(249,115,22,0.08)", border: "1px solid rgba(249,115,22,0.2)", padding: "5px 14px", borderRadius: 9999, marginBottom: 20, textTransform: "uppercase", letterSpacing: "0.06em" }}>
+          <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 600, color: "#0460f9", background: "rgba(4,96,249,0.06)", border: "1px solid rgba(4,96,249,0.2)", padding: "5px 14px", borderRadius: 9999, marginBottom: 20, textTransform: "uppercase", letterSpacing: "0.06em" }}>
             How We Make AI Recommend You
           </span>
           <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 800, color: "#1c1917", letterSpacing: "-0.04em", lineHeight: 1.1, margin: "0 auto 20px", maxWidth: 600 }}>
@@ -80,7 +80,7 @@ export default function AISystem() {
               onMouseLeave={(e) => { e.currentTarget.style.boxShadow = "none"; e.currentTarget.style.transform = "translateY(0)"; }}
             >
               {/* Icon */}
-              <div style={{ width: 44, height: 44, borderRadius: 12, background: "#ffffff", border: "1px solid #e7e5e4", display: "flex", alignItems: "center", justifyContent: "center", color: "#f97316", boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}>
+              <div style={{ width: 44, height: 44, borderRadius: 12, background: "#ffffff", border: "1px solid #e7e5e4", display: "flex", alignItems: "center", justifyContent: "center", color: "#0460f9", boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}>
                 {card.icon}
               </div>
 
@@ -100,7 +100,7 @@ export default function AISystem() {
               <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 8 }}>
                 {card.bullets.map((b, j) => (
                   <li key={j} style={{ display: "flex", alignItems: "flex-start", gap: 8, fontSize: 13, color: "#57534e", lineHeight: 1.5 }}>
-                    <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#f97316", marginTop: 7, flexShrink: 0, display: "block" }} />
+                    <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#0460f9", marginTop: 7, flexShrink: 0, display: "block" }} />
                     {b}
                   </li>
                 ))}
@@ -111,7 +111,6 @@ export default function AISystem() {
 
         {/* Closing line + CTA */}
         <div style={{ textAlign: "center", borderTop: "1px solid #f0efee", paddingTop: 48 }}>
-          <p style={{ fontSize: 16, color: "#78716c", lineHeight: 1.7, marginBottom: 8 }}>The goal is simple:</p>
           <p style={{ fontSize: 20, fontWeight: 700, color: "#1c1917", margin: "0 0 32px", letterSpacing: "-0.02em" }}>
             When someone asks AI about your industry,<br />your name should appear in the answer.
           </p>
@@ -122,7 +121,6 @@ export default function AISystem() {
             onMouseLeave={(e) => (e.currentTarget.style.background = "#1c1917")}
           >
             Book a Free Audit
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" /></svg>
           </a>
         </div>
       </div>

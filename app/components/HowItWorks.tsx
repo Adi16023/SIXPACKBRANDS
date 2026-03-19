@@ -3,10 +3,10 @@ const STEPS = [
   {
     num: "01",
     title: "Describe Your Brand",
-    desc: "Describe your product and audience. SixPackBrands translates your words into design constraints.",
+    desc: "Describe your product and audience. sixpackbrands translates your words into design constraints.",
     tag: "Natural language input",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF4500" strokeWidth="1.8">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0460f9" strokeWidth="1.8">
         <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
@@ -18,7 +18,7 @@ const STEPS = [
     desc: "The engine constructs logos, palettes, and typography rules on a mathematical grid.",
     tag: "AI-powered generation",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF4500" strokeWidth="1.8">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0460f9" strokeWidth="1.8">
         <circle cx="12" cy="12" r="3" />
         <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" strokeLinecap="round" />
       </svg>
@@ -30,7 +30,7 @@ const STEPS = [
     desc: "Download your brand as a React codebase with Tailwind config and vector assets.",
     tag: "Code-ready exports",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF4500" strokeWidth="1.8">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0460f9" strokeWidth="1.8">
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
@@ -80,11 +80,11 @@ export default function HowItWorks() {
                 <span style={{
                   display: "inline-flex", alignItems: "center", gap: 6,
                   fontSize: 12, fontWeight: 500,
-                  background: "rgba(255,69,0,0.10)",
-                  color: "#FF4500",
+                  background: "rgba(4,96,249,0.10)",
+                  color: "#0460f9",
                   padding: "4px 12px", borderRadius: 9999,
                 }}>
-                  <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#FF4500", flexShrink: 0 }} />
+                  <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#0460f9", flexShrink: 0 }} />
                   {step.tag}
                 </span>
               </div>

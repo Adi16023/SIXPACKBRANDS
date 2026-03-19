@@ -20,11 +20,8 @@ export default function SearchChanging() {
         </h2>
 
         {/* Body */}
-        <p style={{ fontSize: 18, color: "#78716c", lineHeight: 1.7, margin: "0 0 12px" }}>
-          They ask AI.
-        </p>
         <p style={{ fontSize: 18, color: "#78716c", lineHeight: 1.7, margin: "0 0 56px" }}>
-          If your brand is not in those answers, you lose the customer.
+          They ask AI. If your brand is not in those answers, you lose the customer.
         </p>
 
         {/* Subheading */}
@@ -45,7 +42,7 @@ export default function SearchChanging() {
                 border: "1px solid #e7e5e4",
                 borderRadius: 12,
                 padding: "14px 20px",
-                boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+                boxShadow: "0 2px 8px rgba(4,96,249,0.05)",
               }}
             >
               {/* AI sparkle icon */}
