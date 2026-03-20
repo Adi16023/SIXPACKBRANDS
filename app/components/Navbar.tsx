@@ -91,7 +91,9 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="nav-desktop" style={{ alignItems: "center", gap: 12 }}>
           <a
-            href="#"
+            href="https://calendly.com/revdikarajinkya/aiseoaudit"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               fontSize: 14,
               fontWeight: 700,
@@ -203,7 +205,9 @@ export default function Navbar() {
               Learn More
             </a>
             <a
-              href="#"
+              href="https://calendly.com/revdikarajinkya/aiseoaudit"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
               style={{
                 display: "block",

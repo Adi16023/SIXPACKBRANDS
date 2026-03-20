@@ -43,7 +43,9 @@ export default function Hero() {
           {/* CTA */}
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             <a
-              href="#"
+              href="https://calendly.com/revdikarajinkya/aiseoaudit"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 15, fontWeight: 700, color: "#fff", background: "#1c1917", padding: "14px 32px", borderRadius: 12, textDecoration: "none", width: "fit-content", letterSpacing: "-0.01em", boxShadow: "0 4px 16px rgba(0,0,0,0.15)", transition: "background 0.15s" }}
               onMouseEnter={(e) => (e.currentTarget.style.background = "#44403c")}
               onMouseLeave={(e) => (e.currentTarget.style.background = "#1c1917")}
