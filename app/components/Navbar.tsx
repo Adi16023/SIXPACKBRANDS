@@ -35,10 +35,8 @@ export default function Navbar() {
         left: 0,
         right: 0,
         zIndex: 50,
-        /* Only add padding when scrolled so the inner bar floats */
         padding: scrolled ? "10px 24px" : "0 24px",
         transition: "padding 0.25s ease",
-        pointerEvents: "none",
       }}
     >
       <header
@@ -52,7 +50,6 @@ export default function Navbar() {
           WebkitBackdropFilter: scrolled ? "blur(16px)" : "none",
           border: scrolled ? "1px solid #e7e5e4" : "none",
           boxShadow: scrolled ? "0 2px 16px rgba(0,0,0,0.07)" : "none",
-          pointerEvents: "auto",
         }}
       >
       <div
@@ -118,7 +115,7 @@ export default function Navbar() {
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
-          style={{ background: "none", border: "none", cursor: "pointer", color: "#1c1917", padding: 4 }}
+          style={{ background: "none", border: "none", cursor: "pointer", color: "#1c1917", padding: 4, pointerEvents: "auto" }}
           className="nav-mobile-btn"
         >
           <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -129,7 +126,10 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu — full overlay */}
+      </header>
+    </div>
+
+      {/* Mobile menu — full overlay (outside header to avoid backdropFilter containing block bug) */}
       {mobileOpen && (
         <div
           style={{
@@ -139,14 +139,16 @@ export default function Navbar() {
             right: 0,
             bottom: 0,
             background: "#fafaf9",
-            zIndex: 100,
+            zIndex: 200,
             display: "flex",
             flexDirection: "column",
             padding: "0 20px 32px",
+            pointerEvents: "auto",
+            overflowY: "auto",
           }}
         >
           {/* Top bar with logo + close */}
-          <div style={{ height: 64, display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: "1px solid #e7e5e4" }}>
+          <div style={{ height: 64, display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: "1px solid #e7e5e4", flexShrink: 0 }}>
             <span style={{ color: "#1c1917", fontWeight: 600, fontSize: 17, letterSpacing: "-0.02em" }}>sixpackbrands</span>
             <button
               onClick={() => setMobileOpen(false)}
@@ -159,7 +161,7 @@ export default function Navbar() {
           </div>
 
           {/* Nav links */}
-          <div style={{ background: "#ffffff", borderRadius: 16, border: "1px solid #e7e5e4", marginTop: 20, overflow: "hidden" }}>
+          <div style={{ background: "#ffffff", borderRadius: 16, border: "1px solid #e7e5e4", marginTop: 20, overflow: "hidden", flexShrink: 0 }}>
             {navLinks.map((l, i) => (
               <a
                 key={l.href}
@@ -181,7 +183,7 @@ export default function Navbar() {
           </div>
 
           {/* CTAs */}
-          <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: 12 }}>
+          <div style={{ marginTop: 24, display: "flex", flexDirection: "column", gap: 12, flexShrink: 0 }}>
             <a
               href="#"
               onClick={() => setMobileOpen(false)}
@@ -221,8 +223,6 @@ export default function Navbar() {
           </div>
         </div>
       )}
-      </header>
-    </div>
     </>
   );
 }
