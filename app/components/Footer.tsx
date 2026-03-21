@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 const PRODUCT_LINKS = [
-  { label: "Why sixpackbrands", href: "#why" },
+  { label: "Why sixpackbrands", href: "#comparison" },
   { label: "How It Works", href: "#system" },
   { label: "Blog", href: "#blog" },
   { label: "FAQ", href: "#faq" },

@@ -30,7 +30,7 @@ const Cross = () => (
 
 export default function ComparisonTable() {
   return (
-    <section className="section-pad" style={{ padding: "96px 24px", background: "#fafaf9" }}>
+    <section id="comparison" className="section-pad" style={{ padding: "96px 24px", background: "#fafaf9" }}>
       <div style={{ maxWidth: 900, margin: "0 auto" }}>
 
         {/* Header */}

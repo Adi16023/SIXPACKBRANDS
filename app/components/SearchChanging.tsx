@@ -16,7 +16,7 @@ export default function SearchChanging() {
 
         {/* Heading */}
         <h2 style={{ fontSize: "clamp(32px,5vw,52px)", fontWeight: 800, color: "#1c1917", letterSpacing: "-0.04em", lineHeight: 1.08, margin: "0 0 24px" }}>
-          People don&apos;t search the internet<br />like before.
+          People don&apos;t search the internet like before.
         </h2>
 
         {/* Body */}

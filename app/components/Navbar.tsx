@@ -14,7 +14,7 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "Why sixpackbrands", href: "#why" },
+    { label: "Why sixpackbrands", href: "#comparison" },
     { label: "How It Works", href: "#system" },
     { label: "Blog", href: "#blog" },
     { label: "FAQ", href: "#faq" },
